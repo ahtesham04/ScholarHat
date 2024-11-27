@@ -1,0 +1,18 @@
+<div class="container text-center">
+<div class="row">
+    <div class="col-4">
+        <h2>List of Products</h2>
+        <ul class="list-group list-group-flush" *ngFor="let item of products">
+            <a routerLink="./{{item.id}}" class="pList"><li class="list-group-item">{{item.title}}</li></a>
+        </ul>
+    </div>
+    <div class="col-8">
+        
+        <h2>Product Details</h2>
+        <!-- <div class="container"> -->
+        <router-outlet></router-outlet>
+        <!-- </div> -->
+    </div>
+    </div>
+</div>
+

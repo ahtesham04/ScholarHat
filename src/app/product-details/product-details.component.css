@@ -1,0 +1,11 @@
+.cDeck{
+    background-color:#edf8fc;
+    border-top: 1px solid;
+}
+
+.pBody{
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+    height: 100%;
+}

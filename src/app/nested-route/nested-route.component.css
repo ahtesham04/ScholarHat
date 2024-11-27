@@ -1,0 +1,10 @@
+a{
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+ul li{
+    text-decoration: none;
+    list-style: none;
+}

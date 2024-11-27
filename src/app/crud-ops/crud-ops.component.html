@@ -1,0 +1,49 @@
+<div class="container mt-4">
+    <h2 class="text-center">List of Users</h2>
+    <button class="btn btn-primary" (click)="addNewUser()">Add New User</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Mobile No</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of users">
+                <td>
+                   <span *ngIf="!row.newUser">{{row.userId}}</span>
+                   <span *ngIf="row.newUser">
+                    <input type="number" [(ngModel)]="row.userId" >
+                   </span> 
+                </td>
+                <td>
+                    <span *ngIf="!row.isEdit">{{row.name}}</span>
+                    <span *ngIf="row.isEdit || row.newUser">
+                        <input type="text" [(ngModel)]="row.name">
+                    </span>
+                </td>
+                <td>
+                    <span *ngIf="!row.isEdit">{{row.mobileNo}}</span>
+                    <span *ngIf="row.isEdit || row.newUser">
+                        <input type="number" [(ngModel)]="row.mobileNo">
+                    </span>
+                </td>
+                <td>
+                    <span *ngIf="!row.isEdit">{{row.city}}</span>
+                    <span *ngIf="row.isEdit || row.newUser">
+                        <input type="text" [(ngModel)]="row.city">
+                    </span>
+                </td>
+                <td>
+                    <button class="btn btn-primary" *ngIf="row.newUser" (click)="addUser(row)">Add</button>
+                    <button class="btn btn-primary" *ngIf="row.isEdit" (click)="updateUser(row)">Update</button>
+                    <button class="btn btn-primary" *ngIf="!row.isEdit && !row.newUser" (click)="editUser(row)">Edit</button> &nbsp;
+                    <button class="btn btn-danger" *ngIf="!row.newUser">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

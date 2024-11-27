@@ -1,0 +1,80 @@
+.active{
+    background-color: blue;
+    color: white;
+    border-radius:10px;
+    border: 2px solid white; 
+    /* transition: ease-in-out 0.4s; */
+    
+}
+
+.product{
+    text-transform: capitalize;
+}
+
+.bottom-nav{
+    background-color: #f7f3f2;
+}
+
+.card-content{
+    /* width:60%; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+    height: 100%;
+    background-color: #f7f3f2;
+}
+
+.card-desc{
+    padding: 2px 16px;
+    /* border-top: 1px solid black; */
+}
+.subheader{
+    height: 50px;
+}
+
+.spinner-loader{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}
+
+.spinner-loader:after{
+    content: "";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-color: #3498db transparent;
+    animation:spinner-loader 1.2s linear infinite;
+}
+
+@keyframes spinner-loader{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.sideFiler{
+    background-color: #e2e8ed;
+}
+
+.chBoxId{
+    width: 100%;
+    line-height: 16px;
+    padding: -40px;
+    margin:6px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+}
+.checkbox{
+    margin: 6px;
+
+}

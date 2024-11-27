@@ -1,0 +1,19 @@
+<div class="col-sm-6">
+    <h3>Create Student Record</h3>
+    <div class="mb-3">
+        <label class="form-label">Student Id</label>
+        <input type="text" name="studentId" class="form-control" [(ngModel)]="student.sId">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="student.name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">City</label>
+        <input type="text" name="city" class="form-control" [(ngModel)]="student.city">
+    </div>
+    <div class="d-grid">
+        <button class="btn btn-primary" type="button" (click)="saveData()">Button</button>
+        &nbsp; <a class="btn btn-warning" [routerLink]="['/localstorage']">Cancel</a>
+    </div>
+</div>
